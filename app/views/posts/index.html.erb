@@ -1,1 +1,13 @@
-<h1> Index page for you. </h1>
+<div class="post-wrapper">
+	<div class="row">
+		<%= @posts.each do |post| %>
+			<div class="post-head">
+			 <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
+			 <%= post.caption %>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+

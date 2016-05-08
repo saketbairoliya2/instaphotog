@@ -1,0 +1,11 @@
+<div class="form-wrapper">
+	<%= simple_form_for @post, html: { class: 'form-horizontal', multipart: true } do |f| %>
+		<div class="form-group">
+			<%= f.input :image%>
+			<div class="text-center">
+				<%= f.input :caption, label: 'Caption goes here', error: 'Caption is mandatory, please specify one' %>
+	  			<%= f.button :submit, class:'btn-success' %>
+	  		</div>
+	  	</div>
+	<% end %>	
+</div>
